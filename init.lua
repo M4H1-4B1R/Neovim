@@ -1,0 +1,5 @@
+require ("core.keys")
+require ("core.custom")
+require ("core.clipboard")
+require ("core.plugins")
+require ("core.configs")
