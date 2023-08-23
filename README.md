@@ -5,5 +5,5 @@ My current neovim config
 
 
 
-Credit:
+Credit: <br>
 chris: https://github.com/cpow
