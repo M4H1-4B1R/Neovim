@@ -32,10 +32,15 @@ local plugins = {
   'tpope/vim-commentary',
 	'vimwiki/vimwiki',
 
-  -- rust babyyyyyyy
   'mfussenegger/nvim-dap',
   'rcarriga/nvim-dap-ui',
   'simrat39/rust-tools.nvim',
+
+{
+    'windwp/nvim-autopairs',
+    event = "InsertEnter",
+    opts = {} -- this is equalent to setup({}) function
+},
 
   -- completion
   'hrsh7th/nvim-cmp',
