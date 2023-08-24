@@ -17,3 +17,4 @@ vim.opt.wrap = false
 --visuals
 vim.opt.cursorline = true
 vim.opt.termguicolors = true
+--vim.loader.enable = true

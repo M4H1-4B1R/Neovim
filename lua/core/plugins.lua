@@ -30,6 +30,7 @@ local plugins = {
   'christoomey/vim-tmux-navigator',
   'tpope/vim-fugitive',
   'tpope/vim-commentary',
+	'vimwiki/vimwiki',
 
   -- rust babyyyyyyy
   'mfussenegger/nvim-dap',
