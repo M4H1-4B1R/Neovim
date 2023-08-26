@@ -13,7 +13,8 @@ vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
   'wbthomason/packer.nvim',
-  'ellisonleao/gruvbox.nvim',
+--  'ellisonleao/gruvbox.nvim',
+  { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
   'rebelot/kanagawa.nvim',
   {
     'dracula/vim',
@@ -36,6 +37,7 @@ local plugins = {
   'rcarriga/nvim-dap-ui',
   'simrat39/rust-tools.nvim',
 
+	-- autoclose pairs
 {
     'windwp/nvim-autopairs',
     event = "InsertEnter",

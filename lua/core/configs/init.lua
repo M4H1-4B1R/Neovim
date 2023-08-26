@@ -1,4 +1,6 @@
-require ('core.configs.gruvbox')
+--require ('core.configs.gruvbox')
+--require ('core.configs.catppuccin')
+require ('core.configs.kanagawa')
 require ('core.configs.mason')
 require ('core.configs.lualine')
 require ('core.configs.tree')
