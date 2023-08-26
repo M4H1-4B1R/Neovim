@@ -3,6 +3,9 @@ My current neovim config
 
 ![neovim](https://github.com/autonomuscoder/Neovim-current/assets/112854891/fee8919c-979c-4b70-acf5-f16bfd64f19d)
 
+![nvim](https://github.com/autonomuscoder/Neovim-current/assets/112854891/3445cfce-43e3-4f92-bb42-0143da8c047c)
+
+
 
 
 Credit: <br>
