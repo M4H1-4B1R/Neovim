@@ -12,7 +12,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
-  'wbthomason/packer.nvim',
+--  'wbthomason/packer.nvim',
 --  'ellisonleao/gruvbox.nvim',
   { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
   'rebelot/kanagawa.nvim',
@@ -20,6 +20,7 @@ local plugins = {
     'dracula/vim',
     lazy = false,
   },
+	'shaunsingh/nord.nvim',
   'nvim-tree/nvim-tree.lua',
   'nvim-tree/nvim-web-devicons',
   'nvim-lualine/lualine.nvim',
