@@ -21,6 +21,7 @@ local plugins = {
     lazy = false,
   },
 	'shaunsingh/nord.nvim',
+	'norcalli/nvim-colorizer.lua',
   'nvim-tree/nvim-tree.lua',
   'nvim-tree/nvim-web-devicons',
   'nvim-lualine/lualine.nvim',

@@ -10,3 +10,5 @@ require ('core.configs.treesitter')
 require ('core.configs.lsp')
 require ('core.configs.autocomplete')
 require ('core.configs.copilot')
+require ('core.configs.colorizer')
+
