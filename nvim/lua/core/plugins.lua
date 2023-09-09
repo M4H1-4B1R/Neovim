@@ -13,13 +13,14 @@ vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
 --  'wbthomason/packer.nvim',
---  'ellisonleao/gruvbox.nvim',
-  { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+  'ellisonleao/gruvbox.nvim',
   'rebelot/kanagawa.nvim',
-  {
-    'dracula/vim',
-    lazy = false,
-  },
+	{
+  "folke/tokyonight.nvim",
+  lazy = false,
+  priority = 1000,
+  opts = {},
+},
  {
   'glepnir/dashboard-nvim',
   event = 'VimEnter',
