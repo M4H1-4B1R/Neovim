@@ -13,8 +13,11 @@ vim.opt.tabstop = 2
 vim.opt.ai = true
 vim.opt.si = true
 vim.opt.wrap = false
+vim.opt.shell = 'fish'
+vim.opt.wildignore:append {'*/node_modules/*'}
+vim.opt.winblend = 0
+vim.opt.background = 'dark'
 
 --visuals
 vim.opt.cursorline = true
 vim.opt.termguicolors = true
---vim.loader.enable = true

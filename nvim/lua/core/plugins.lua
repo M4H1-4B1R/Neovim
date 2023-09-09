@@ -20,6 +20,20 @@ local plugins = {
     'dracula/vim',
     lazy = false,
   },
+ {
+  'glepnir/dashboard-nvim',
+  event = 'VimEnter',
+  config = function()
+    require('dashboard').setup {
+      -- config
+			theme = 'hyper',
+			hide = {
+  statusline = false,
+}
+    }
+  end,
+  requires = {'nvim-tree/nvim-web-devicons'}
+},
 	'shaunsingh/nord.nvim',
 	'norcalli/nvim-colorizer.lua',
   'nvim-tree/nvim-tree.lua',
@@ -45,6 +59,11 @@ local plugins = {
     event = "InsertEnter",
     opts = {} -- this is equalent to setup({}) function
 },
+
+-- Prettier
+   'neovim/nvim-lspconfig',
+	 'jose-elias-alvarez/null-ls.nvim',
+	 'MunifTanjim/prettier.nvim',
 
   -- completion
   'hrsh7th/nvim-cmp',
