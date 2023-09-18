@@ -12,7 +12,6 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
---  'wbthomason/packer.nvim',
   'ellisonleao/gruvbox.nvim',
   'rebelot/kanagawa.nvim',
 	{
@@ -21,6 +20,7 @@ local plugins = {
   priority = 1000,
   opts = {},
 },
+'decaycs/decay.nvim',
  {
   'glepnir/dashboard-nvim',
   event = 'VimEnter',
