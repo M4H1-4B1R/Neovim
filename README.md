@@ -1,4 +1,4 @@
-# Neovim-current
+# Neovim-Dot
 My current neovim config
 
 
