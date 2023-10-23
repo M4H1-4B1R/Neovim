@@ -14,6 +14,3 @@ vim.keymap.set('', 'sh', '<C-w>h')
 vim.keymap.set('', 'sj', '<C-w>j')
 vim.keymap.set('', 'sk', '<C-w>k')
 vim.keymap.set('', 'sl', '<C-w>l')
-
--- Fine cmdline
-vim.api.nvim_set_keymap('n', ':', '<cmd>FineCmdline<CR>', { noremap = true })

@@ -12,42 +12,19 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
-	"ellisonleao/gruvbox.nvim",
 	"rebelot/kanagawa.nvim",
-	{
-		"folke/tokyonight.nvim",
-		lazy = false,
-		priority = 1000,
-		opts = {},
-	},
 	{ "catppuccin/nvim", name = "catppuccin", priority = 1000 },
-	{
-		"glepnir/dashboard-nvim",
-		event = "VimEnter",
-		requires = { "nvim-tree/nvim-web-devicons" },
-	},
 	"nvim-tree/nvim-tree.lua",
 	"nvim-tree/nvim-web-devicons",
 	"nvim-lualine/lualine.nvim",
 	"nvim-treesitter/nvim-treesitter",
-	"vim-test/vim-test",
-	"lewis6991/gitsigns.nvim",
 	"christoomey/vim-tmux-navigator",
 	"tpope/vim-fugitive",
+	"tpope/vim-rhubarb",
 	"tpope/vim-commentary",
+	"tpope/vim-sleuth",
 	"vimwiki/vimwiki",
-	"lambdalisue/suda.vim",
 	"norcalli/nvim-colorizer.lua",
-	'VonHeikemen/fine-cmdline.nvim',
-	'MunifTanjim/nui.nvim',
-
-	-- autoclose pairs
-	{
-		"windwp/nvim-autopairs",
-		event = "InsertEnter",
-		opts = {}, -- this is equalent to setup({}) function
-	},
-
 	{
 		"stevearc/conform.nvim",
 		opts = {
@@ -55,21 +32,57 @@ local plugins = {
 		},
 	},
 
-	-- completion
-	"hrsh7th/nvim-cmp",
-	"hrsh7th/cmp-nvim-lsp",
-	"L3MON4D3/LuaSnip",
-	"saadparwaiz1/cmp_luasnip",
-	"rafamadriz/friendly-snippets",
-	"williamboman/mason.nvim",
-	"neovim/nvim-lspconfig",
-	"williamboman/mason-lspconfig.nvim",
-	"glepnir/lspsaga.nvim",
-	{
-		"nvim-telescope/telescope.nvim",
-		tag = "0.1.0",
-		dependencies = { { "nvim-lua/plenary.nvim" } },
-	},
+  { 'folke/which-key.nvim',  opts = {} },
+    'lewis6991/gitsigns.nvim',
+  {
+    -- Add indentation guides even on blank lines
+    'lukas-reineke/indent-blankline.nvim',
+    -- Enable `lukas-reineke/indent-blankline.nvim`
+    -- See `:help ibl`
+    main = 'ibl',
+    opts = {},
+  },
+
+ {
+    'nvim-telescope/telescope.nvim', tag = '0.1.4',
+-- or                              , branch = '0.1.x',
+      dependencies = { 'nvim-lua/plenary.nvim' }
+    },
+
+-- completions
+  {
+    -- LSP Configuration & Plugins
+    'neovim/nvim-lspconfig',
+    dependencies = {
+      -- Automatically install LSPs to stdpath for neovim
+      'williamboman/mason.nvim',
+      'williamboman/mason-lspconfig.nvim',
+
+      -- Useful status updates for LSP
+      -- NOTE: `opts = {}` is the same as calling `require('fidget').setup({})`
+      { 'j-hui/fidget.nvim', tag = 'legacy', opts = {} },
+
+      -- Additional lua configuration, makes nvim stuff amazing!
+      'folke/neodev.nvim',
+    },
+  },
+
+  {
+    -- Autocompletion
+    'hrsh7th/nvim-cmp',
+    dependencies = {
+      -- Snippet Engine & its associated nvim-cmp source
+      'L3MON4D3/LuaSnip',
+      'saadparwaiz1/cmp_luasnip',
+
+      -- Adds LSP completion capabilities
+      'hrsh7th/cmp-nvim-lsp',
+
+      -- Adds a number of user-friendly snippets
+      'rafamadriz/friendly-snippets',
+    },
+  },
+
 }
 
 local opts = {}

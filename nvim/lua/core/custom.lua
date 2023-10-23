@@ -17,7 +17,18 @@ vim.opt.shell = 'fish'
 vim.opt.wildignore:append {'*/node_modules/*'}
 vim.opt.winblend = 0
 vim.opt.background = 'dark'
+vim.o.completeopt = 'menuone,noselect'
 
 --visuals
+-- [[ Highlight on yank ]]
+local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
+vim.api.nvim_create_autocmd('TextYankPost', {
+  callback = function()
+    vim.highlight.on_yank()
+  end,
+  group = highlight_group,
+  pattern = '*',
+})
+
 vim.opt.cursorline = true
 vim.opt.termguicolors = true
