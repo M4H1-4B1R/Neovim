@@ -14,3 +14,7 @@ vim.keymap.set('', 'sh', '<C-w>h')
 vim.keymap.set('', 'sj', '<C-w>j')
 vim.keymap.set('', 'sk', '<C-w>k')
 vim.keymap.set('', 'sl', '<C-w>l')
+
+local builtin = require('telescope.builtin')
+vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
+vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})

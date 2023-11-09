@@ -13,11 +13,16 @@ vim.opt.tabstop = 2
 vim.opt.ai = true
 vim.opt.si = true
 vim.opt.wrap = false
-vim.opt.shell = 'fish'
+vim.opt.shell = 'bash'
 vim.opt.wildignore:append {'*/node_modules/*'}
 vim.opt.winblend = 0
 vim.opt.background = 'dark'
 vim.o.completeopt = 'menuone,noselect'
+vim.opt.expandtab = true
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
+vim.opt.splitright = true
+vim.opt.splitbelow = true
 
 --visuals
 -- [[ Highlight on yank ]]
@@ -32,3 +37,4 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 
 vim.opt.cursorline = true
 vim.opt.termguicolors = true
+vim.opt.clipboard:append {'unnamedplus'}
