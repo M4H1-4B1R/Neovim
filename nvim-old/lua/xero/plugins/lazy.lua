@@ -14,40 +14,19 @@ vim.g.mapleader = " " -- Make sure to set `mapleader` before lazy so your mappin
 
 require("lazy").setup({
   { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
-  { "folke/tokyonight.nvim",
-  lazy = false,
-  priority = 1000,
-  },
-  {
-    'goolord/alpha-nvim',
-    config = function ()
-      require("alpha").setup(require("alpha.themes.startify").config)
-    end
-  },
   'nvim-lualine/lualine.nvim',
   {'nvim-tree/nvim-web-devicons', opt = true },
   'nvim-tree/nvim-tree.lua',
-  {'lukas-reineke/indent-blankline.nvim', main = 'ibl',},
-  { 'windwp/nvim-autopairs', 
-  event = "InsertEnter",
-},
   'christoomey/vim-tmux-navigator',
   'numToStr/Comment.nvim',
   'nvim-lua/plenary.nvim',
   {'nvim-telescope/telescope.nvim', tag = '0.1.4',},
-  'nvim-telescope/telescope-file-browser.nvim',
   {
     'nvim-treesitter/nvim-treesitter',
     dependencies = {
       'nvim-treesitter/nvim-treesitter-textobjects',
     },
     build = ':TSUpdate',
-  },
-
-  -- formatting
-  {
-    'stevearc/conform.nvim',
-    event = {'BufReadPre', 'BufNewFile'},
   },
   -- completions
   'hrsh7th/nvim-cmp',

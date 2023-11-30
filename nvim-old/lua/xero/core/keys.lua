@@ -1,6 +1,5 @@
 vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>ex", ':NvimTreeFindFileToggle<CR>')
---vim.keymap.set("n", "<leader>ex", "Telescope file_browser path=%:p:h select_buffer=true<CR>", { noremap = true })
 
 --splits
 vim.keymap.set("n", "ss", ':split<Return><C-w>w', { silent = true })
