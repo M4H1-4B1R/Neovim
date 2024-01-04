@@ -5,6 +5,7 @@ conform.setup ({
     html = {'prettier'},
     css  = {'prettier'},
     javascript = {'prettier'},
+    lua = {'stylua'},
   },
   format_on_save = {
     lsp_fallback = true,
