@@ -47,6 +47,13 @@ vim.o.tabstop = 2
 vim.o.autoindent = true
 vim.o.smartindent = true
 
+-- disable some default providers
+vim.g["loaded_node_provider"] = 0
+vim.g["loaded_python3_provider"] = 0
+vim.g["loaded_perl_provider"] = 0
+vim.g["loaded_ruby_provider"] = 0
+
+--keybinds
 --splits
 vim.keymap.set("n", "ss", ':split<Return><C-w>w', { silent = true })
 vim.keymap.set("n", "sv", ':vsplit<Return><C-w>w', { silent = true })
@@ -58,6 +65,9 @@ vim.keymap.set("n", "tp", ":tabprev<Return>", { silent = true })
 -- netrw
 vim.keymap.set("n", "<leader>fe", vim.cmd.Ex)
 
+-- lazy menu
+vim.keymap.set("n", "<leader>l", ":Lazy<Return>", { silent = true })
+vim.keymap.set("n", "<leader>m", ":Mason<Return>", { silent = true })
 
 
 -- bootstraping lazy
