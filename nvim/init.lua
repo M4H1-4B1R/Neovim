@@ -6,6 +6,8 @@
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
+vim.loader.enable()
+
 -- Set highlight on search
 vim.o.hlsearch = false
 
