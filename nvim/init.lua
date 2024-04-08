@@ -43,11 +43,12 @@ vim.o.timeoutlen = 300
 vim.o.completeopt = 'menuone,noselect'
 
 -- NOTE: You should make sure your terminal supports this
-vim.o.termguicolors = true
+vim.o.termguicolors = false 
 vim.o.shiftwidth = 2
 vim.o.tabstop = 2
 vim.o.autoindent = true
 vim.o.smartindent = true
+vim.o.shell = "fish"
 
 -- disable some default providers
 vim.g["loaded_node_provider"] = 0
