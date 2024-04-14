@@ -68,6 +68,10 @@ vim.keymap.set("n", "tp", ":tabprev<Return>", { silent = true })
 -- netrw
 vim.keymap.set("n", "<leader>fe", vim.cmd.Ex)
 
+-- buffer navigation
+vim.keymap.set('n', '<leader>bn', ":bnext<CR>")
+vim.keymap.set('n', '<leader>bp', ":bprevious<CR>")
+
 -- lazy menu
 vim.keymap.set("n", "<leader>l", ":Lazy<Return>", { silent = true })
 vim.keymap.set("n", "<leader>m", ":Mason<Return>", { silent = true })
@@ -101,3 +105,5 @@ vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
 vim.keymap.set('n', 'gd', vim.lsp.buf.definition, {})
 vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, {})
 vim.keymap.set('n', '<leader>lf', vim.lsp.buf.format, {})
+
+
