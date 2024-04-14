@@ -24,4 +24,32 @@ return {
 			{ "<leader>u", "<cmd>lua require('undotree').toggle()<cr>" },
 		},
 	},
+	{
+		"ray-x/web-tools.nvim",
+		config = function()
+			require("web-tools").setup({
+				keymaps = {
+					rename = nil, -- by default use same setup of lspconfig
+					repeat_rename = ".", -- . to repeat
+				},
+				hurl = { -- hurl default
+					show_headers = false, -- do not show http headers
+					floating = false, -- use floating windows (need guihua.lua)
+					json5 = false, -- use json5 parser require json5 treesitter
+					formatters = { -- format the result by filetype
+						json = { "jq" },
+						html = { "prettier", "--parser", "html" },
+					},
+				},
+			})
+		end,
+	},
+	{
+		"otavioschwanck/arrow.nvim",
+		dependencies = { "nvim-tree/nvim-web-devicons" },
+		opts = {
+			show_icons = true,
+			leader_key = ";", -- Recommended to be a single key
+		},
+	},
 }
