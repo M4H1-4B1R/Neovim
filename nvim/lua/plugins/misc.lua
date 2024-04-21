@@ -52,4 +52,11 @@ return {
 			leader_key = ";", -- Recommended to be a single key
 		},
 	},
+	{
+		"numToStr/Comment.nvim",
+		lazy = false,
+		config = function()
+			require("Comment").setup()
+		end,
+	},
 }
