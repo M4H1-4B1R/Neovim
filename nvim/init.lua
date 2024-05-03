@@ -24,7 +24,6 @@
 -- set leader
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
-
 vim.loader.enable()
 
 -- Set highlight on search
