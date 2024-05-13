@@ -63,7 +63,7 @@ return {
 			})
 
 			-- setup must be called before loading
-			-- vim.cmd.colorscheme("catppuccin")
+			vim.cmd.colorscheme("catppuccin")
 		end,
 	},
 	{
@@ -71,8 +71,8 @@ return {
 		lazy = false,
 		priority = 1000,
 		config = function()
-			vim.cmd.colorscheme("hepburn")
-			HateSolidBackground()
+			-- vim.cmd.colorscheme("hepburn")
+			-- HateSolidBackground()
 		end
 	},
 }

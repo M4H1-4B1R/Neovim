@@ -14,6 +14,9 @@ return {
 	},
 	{
 		"hrsh7th/nvim-cmp",
+		dependencies = {
+		"hrsh7th/cmp-path",
+		},
 		config = function()
 			local cmp = require("cmp")
 
@@ -41,6 +44,7 @@ return {
 					{ name = "luasnip" }, -- For luasnip users.
 				}, {
 					{ name = "buffer" },
+					{ name = "path" },
 				}),
 			})
 		end,
