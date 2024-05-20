@@ -2,6 +2,7 @@ return {
 
 	{
 		"christoomey/vim-tmux-navigator",
+
 		cmd = {
 			"TmuxNavigateLeft",
 			"TmuxNavigateDown",
@@ -58,13 +59,6 @@ return {
 		lazy = false,
 		config = function()
 			require("Comment").setup()
-		end,
-	},
-	{
-		"Lunarvim/breadcrumbs.nvim",
-		dependencies = "SmiteshP/nvim-navic",
-		config = function()
-			require("breadcrumbs").setup()
 		end,
 	},
 }

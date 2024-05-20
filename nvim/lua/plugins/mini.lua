@@ -3,7 +3,6 @@ return {
 	version = "*",
 	config = function()
 		local hipatterns = require("mini.hipatterns")
-		require("mini.statusline").setup()
 		require("mini.indentscope").setup()
 		hipatterns.setup({
 			highlighters = {
