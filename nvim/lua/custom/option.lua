@@ -94,13 +94,13 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 
 
 -- from the primeagen
-function HateSolidBackground(color)
-	color = color or "habamax"
-	vim.cmd.colorscheme(color)
-
-	vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-	vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
-end
-
-vim.cmd.colorscheme "habamax"
-HateSolidBackground()
+-- function HateSolidBackground(color)
+-- 	color = color or "slate"
+-- 	vim.cmd.colorscheme(color)
+--
+-- 	vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+-- 	vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+-- end
+--
+-- vim.cmd.colorscheme "slate"
+-- HateSolidBackground()

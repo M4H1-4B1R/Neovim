@@ -61,4 +61,7 @@ return {
 			require("Comment").setup()
 		end,
 	},
+	{
+		"gpanders/nvim-parinfer",
+	}
 }
