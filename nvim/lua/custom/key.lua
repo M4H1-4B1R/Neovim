@@ -40,3 +40,7 @@ vim.keymap.set('n', 'gd', vim.lsp.buf.definition, {})
 vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, {})
 vim.keymap.set('n', '<leader>lf', vim.lsp.buf.format, {})
 
+vim.keymap.set('n', '<leader>ln', function()
+  local current_number = vim.wo.relativenumber
+  vim.wo.relativenumber = not current_number
+end, { silent = true })
