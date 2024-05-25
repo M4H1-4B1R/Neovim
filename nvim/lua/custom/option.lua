@@ -19,6 +19,8 @@ vim.g.syntax = true
 -- enable cursorline
 vim.o.cursorline = true
 
+vim.o.cmdheight = 0
+
 -- Sync clipboard between OS and Neovim.
 --  Remove this option if you want your OS clipboard to remain independent.
 --  See `:help 'clipboard'`
