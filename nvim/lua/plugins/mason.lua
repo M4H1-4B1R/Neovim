@@ -34,6 +34,10 @@ return {
 
 				capabilities = capabilities,
 			})
+			lspconfig.intelephense.setup({
+
+				capabilities = capabilities,
+			})
 		end,
 	},
 }

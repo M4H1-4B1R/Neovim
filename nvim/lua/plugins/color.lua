@@ -1,16 +1,13 @@
 return {
 	{
-		"Everblush/nvim",
-		name = "everblush",
+		"AlexvZyl/nordic.nvim",
 		lazy = false,
 		priority = 1000,
 		config = function()
-			require("everblush").setup({
-				-- Default options
-				override = {},
-				transparent_background = true,
+			require("nordic").setup({
+				transparent_bg = true,
 			})
-			-- vim.cmd("colorscheme everblush")
+			require("nordic").load()
 		end,
 	},
 	{
@@ -69,7 +66,7 @@ return {
 				})
 
 				-- setup must be called before loading
-				vim.cmd.colorscheme("catppuccin")
+				-- vim.cmd.colorscheme("catppuccin")
 			end,
 		},
 	},

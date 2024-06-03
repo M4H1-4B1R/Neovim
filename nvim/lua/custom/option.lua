@@ -19,6 +19,7 @@ vim.g.syntax = true
 -- enable cursorline
 vim.o.cursorline = true
 
+-- hide the cmdline for cleaner look
 vim.o.cmdheight = 0
 
 -- Sync clipboard between OS and Neovim.
@@ -49,7 +50,7 @@ vim.o.updatetime = 250
 vim.o.showmode = false
 
 -- Minimal number of screen lines to keep above and below the cursor.
-vim.o.scrolloff = 10
+-- vim.o.scrolloff = 10
 
 -- vim.o.inccommand = 'split'
 
@@ -62,7 +63,7 @@ vim.o.shiftwidth = 2
 vim.o.tabstop = 2
 vim.o.autoindent = true
 vim.o.smartindent = true
-vim.o.shell = "bash"
+vim.o.shell = "fish"
 
 -- netrw customization
 vim.g.netrw_browse_split = 0
@@ -78,7 +79,7 @@ vim.g["loaded_ruby_provider"] = 0
 -- neovide specific settings
 if vim.g.neovide then
 vim.o.guifont = "MesloLGS Nerd Font:h13"
-vim.g.neovide_transparency = 0.7
+vim.g.neovide_transparency = 1
 vim.g.neovide_theme = 'auto'
 vim.g.neovide_refresh_rate = 60
 end
