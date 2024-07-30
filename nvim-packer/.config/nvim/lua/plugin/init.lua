@@ -1,0 +1,6 @@
+require("plugin.colorscheme")
+require("plugin.lualine")
+require("plugin.lsp")
+require("plugin.nonels")
+require("plugin.completions")
+require("plugin.telescope")
