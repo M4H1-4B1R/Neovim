@@ -11,10 +11,10 @@ return {
 			"TmuxNavigatePrevious",
 		},
 		keys = {
-			{ "<c-h>",  "<cmd><C-U>TmuxNavigateLeft<cr>" },
-			{ "<c-j>",  "<cmd><C-U>TmuxNavigateDown<cr>" },
-			{ "<c-k>",  "<cmd><C-U>TmuxNavigateUp<cr>" },
-			{ "<c-l>",  "<cmd><C-U>TmuxNavigateRight<cr>" },
+			{ "<c-h>", "<cmd><C-U>TmuxNavigateLeft<cr>" },
+			{ "<c-j>", "<cmd><C-U>TmuxNavigateDown<cr>" },
+			{ "<c-k>", "<cmd><C-U>TmuxNavigateUp<cr>" },
+			{ "<c-l>", "<cmd><C-U>TmuxNavigateRight<cr>" },
 			{ "<c-\\>", "<cmd><C-U>TmuxNavigatePrevious<cr>" },
 		},
 	},
@@ -31,14 +31,14 @@ return {
 		config = function()
 			require("web-tools").setup({
 				keymaps = {
-					rename = nil,    -- by default use same setup of lspconfig
+					rename = nil, -- by default use same setup of lspconfig
 					repeat_rename = ".", -- . to repeat
 				},
-				hurl = {           -- hurl default
+				hurl = { -- hurl default
 					show_headers = false, -- do not show http headers
 					floating = false, -- use floating windows (need guihua.lua)
-					json5 = false,   -- use json5 parser require json5 treesitter
-					formatters = {   -- format the result by filetype
+					json5 = false, -- use json5 parser require json5 treesitter
+					formatters = { -- format the result by filetype
 						json = { "jq" },
 						html = { "prettier", "--parser", "html" },
 					},
@@ -63,5 +63,5 @@ return {
 	},
 	{
 		"gpanders/nvim-parinfer",
-	}
+	},
 }
