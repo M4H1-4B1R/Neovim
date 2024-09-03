@@ -15,7 +15,7 @@ return {
 	{
 		"hrsh7th/nvim-cmp",
 		dependencies = {
-		"hrsh7th/cmp-path",
+			"hrsh7th/cmp-path",
 		},
 		config = function()
 			local cmp = require("cmp")
@@ -33,9 +33,9 @@ return {
 					documentation = cmp.config.window.bordered(),
 				},
 				mapping = cmp.mapping.preset.insert({
-					["<C-b>"] = cmp.mapping.scroll_docs(-4),
-					["<C-n>"] = cmp.mapping.scroll_docs(4),
-					["<Tab>"] = cmp.mapping.complete(),
+					["<S-Tab>"] = cmp.mapping.select_prev_item(),
+					["<Tab>"] = cmp.mapping.select_next_item(),
+					-- ["<Tab>"] = cmp.mapping.complete(),
 					["<C-e>"] = cmp.mapping.abort(),
 					["<CR>"] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
 				}),
