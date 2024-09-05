@@ -2,7 +2,8 @@ return {
 	{
 		"williamboman/mason.nvim",
 		config = function()
-			require("mason").setup()
+			require("mason").setup({
+			})
 		end,
 	},
 	{
@@ -21,22 +22,27 @@ return {
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
 			lspconfig.lua_ls.setup({
 				capabilties = capabilities,
+				on_attach = on_attach,
 			})
 			lspconfig.tsserver.setup({
 
 				capabilties = capabilities,
+				on_attach = on_attach,
 			})
 			lspconfig.html.setup({
 
 				capabilties = capabilities,
+				on_attach = on_attach,
 			})
 			lspconfig.cssls.setup({
 
 				capabilities = capabilities,
+				on_attach = on_attach,
 			})
 			lspconfig.intelephense.setup({
 
 				capabilities = capabilities,
+				on_attach = on_attach,
 			})
 		end,
 	},
