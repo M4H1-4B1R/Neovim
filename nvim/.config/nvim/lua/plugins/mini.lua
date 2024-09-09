@@ -1,6 +1,7 @@
 return {
 	"echasnovski/mini.nvim",
 	version = "*",
+	event = "BufEnter",
 	config = function()
 		local hipatterns = require("mini.hipatterns")
 		require("mini.indentscope").setup()
@@ -10,6 +11,5 @@ return {
 			},
 		})
 		require("mini.pairs").setup()
-		-- require("mini.statusline").setup()
 	end,
 }
