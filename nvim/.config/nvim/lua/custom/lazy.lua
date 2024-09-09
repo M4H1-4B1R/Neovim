@@ -1,5 +1,5 @@
-vim.g.mapleader = ' '
-vim.g.maplocalleader = ' '
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
 
 -- bootstraping lazy
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -19,14 +19,15 @@ require("lazy").setup("plugins", {
 		enabled = true,
 		notify = false,
 	},
+	change_detection = { enabled = false },
 	ui = {
 		icons = {
-			cmd = '⌘',
+			cmd = "⌘",
 			ft = "",
 			lazy = "󰂠 ",
 			loaded = "",
 			not_loaded = "",
-			init = '⚙',
+			init = "⚙",
 		},
-	}
+	},
 })
