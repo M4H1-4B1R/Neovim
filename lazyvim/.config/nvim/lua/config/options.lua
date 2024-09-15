@@ -1,3 +1,132 @@
--- Options are automatically loaded before lazy.nvim startup
--- Default options that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/options.lua
--- Add any additional options here
+-- [[ Setting options ]]
+-- See `:help vim.o`
+-- NOTE: You can change these options as you wish!
+
+vim.loader.enable()
+
+-- encoding
+vim.scriptencoding = "utf-8"
+vim.opt.encoding = "utf-8"
+vim.opt.fileencoding = "utf-8"
+
+-- tabs to spaces
+vim.o.expandtab = true
+
+-- Set highlight on search
+vim.o.hlsearch = true
+
+-- Make line numbers default
+vim.wo.relativenumber = true
+
+-- Enable mouse mode
+vim.o.mouse = "a"
+
+-- enable cursorline
+vim.o.cursorline = true
+
+-- hide the cmdline for cleaner look
+vim.o.cmdheight = 0
+
+-- Sync clipboard between OS and Neovim.
+--  Remove this option if you want your OS clipboard to remain independent.
+--  See `:help 'clipboard'`
+vim.o.clipboard = "unnamedplus"
+
+-- Enable break indent
+vim.o.breakindent = true
+
+-- Save undo history
+vim.o.undofile = true
+
+-- checks to see nerd font availability
+vim.g.have_nerd_font = true
+
+-- Case-insensitive searching UNLESS \C or capital in search
+vim.o.ignorecase = true
+vim.o.smartcase = true
+
+-- Keep signcolumn off by default
+vim.wo.signcolumn = "no"
+
+-- Decrease update time
+vim.o.updatetime = 250
+-- vim.o.timeoutlen = 300
+--
+vim.o.showmode = false
+
+-- Minimal number of screen lines to keep above and below the cursor.
+vim.o.scrolloff = 10
+
+-- wrapping
+vim.o.wrap = false
+
+-- backspace ignores whitespace
+vim.opt.backspace = { "start", "eol", "indent" }
+
+-- file searches in the sub directories
+vim.opt.path:append({ "**" })
+
+-- search ignores node modules
+vim.opt.wildignore:append({ "*/node_modules/*" })
+
+-- better splits
+vim.o.splitbelow = true
+vim.o.splitright = true
+vim.opt.splitkeep = "cursor"
+
+-- vim.o.inccommand = 'split'
+
+-- Set completeopt to have a better completion experience
+vim.o.completeopt = "menuone,noselect"
+
+-- NOTE: You should make sure your terminal supports this
+vim.o.termguicolors = true
+vim.o.shiftwidth = 2
+vim.o.tabstop = 2
+vim.o.autoindent = true
+vim.o.smartindent = true
+vim.o.shell = "fish"
+
+-- netrw customization
+vim.g.netrw_browse_split = 0
+vim.g.netrw_banner = 0
+vim.g.netrw_winsize = 25
+vim.g.loaded_netrwPlugin = 1
+vim.g.loaded_netrw = 1
+
+-- disable some default providers
+vim.g["loaded_node_provider"] = 0
+vim.g["loaded_python3_provider"] = 0
+vim.g["loaded_perl_provider"] = 0
+vim.g["loaded_ruby_provider"] = 0
+
+-- neovide specific settings
+if vim.g.neovide then
+  vim.o.guifont = "MesloLGS Nerd Font:h13"
+  vim.g.neovide_transparency = 1
+  vim.g.neovide_theme = "auto"
+  vim.g.neovide_refresh_rate = 60
+end
+
+-- Highlight when yanking (copying) text
+--  Try it with `yap` in normal mode
+--  See `:help vim.highlight.on_yank()`
+vim.api.nvim_create_autocmd("TextYankPost", {
+  desc = "Highlight when yanking (copying) text",
+  group = vim.api.nvim_create_augroup("kickstart-highlight-yank", { clear = true }),
+  callback = function()
+    vim.highlight.on_yank()
+  end,
+})
+
+-- from the primeagen
+-- function HateSolidBackground(color)
+-- 	color = color or "slate"
+-- 	vim.cmd.colorscheme(color)
+--
+-- 	vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+-- 	vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+-- end
+--
+-- vim.cmd.colorscheme "slate"
+-- HateSolidBackground()
