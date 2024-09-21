@@ -11,5 +11,6 @@ return {
 			},
 		})
 		require("mini.pairs").setup()
+		require("mini.notify").setup()
 	end,
 }

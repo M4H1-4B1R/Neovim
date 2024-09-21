@@ -16,6 +16,7 @@ return {
 		"hrsh7th/nvim-cmp",
 		dependencies = {
 			"hrsh7th/cmp-path",
+			"hrsh7th/cmp-emoji",
 		},
 		config = function()
 			local cmp = require("cmp")
@@ -45,6 +46,7 @@ return {
 				}, {
 					{ name = "buffer" },
 					{ name = "path" },
+					{ name = "emoji" },
 				}),
 			})
 		end,
