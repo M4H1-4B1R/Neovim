@@ -9,7 +9,7 @@ return {
 		"williamboman/mason-lspconfig.nvim",
 		config = function()
 			require("mason-lspconfig").setup({
-				ensure_installed = { "lua_ls", "ts_ls", "html", "cssls" },
+				ensure_installed = { "lua_ls", "ts_ls", "html", "cssls", "vtsls" },
 				auto_install = true,
 			})
 		end,
@@ -39,6 +39,11 @@ return {
 				on_attach = on_attach,
 			})
 			lspconfig.intelephense.setup({
+
+				capabilities = capabilities,
+				on_attach = on_attach,
+			})
+			lspconfig.vtsls.setup({
 
 				capabilities = capabilities,
 				on_attach = on_attach,
