@@ -11,7 +11,7 @@ vim.keymap.set("n", "tn", ":tabnext<Return>", { silent = true })
 vim.keymap.set("n", "tp", ":tabprev<Return>", { silent = true })
 
 -- netrw
-vim.keymap.set("n", "<leader>fe", ":NvimTreeToggle<CR>", { silent = true })
+vim.keymap.set("n", "<leader>fe", ":Ex<CR>", { silent = true })
 
 -- buffer navigation
 vim.keymap.set('n', '<leader>bn', ":bnext<CR>")
@@ -41,6 +41,6 @@ vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, {})
 vim.keymap.set('n', '<leader>lf', vim.lsp.buf.format, {})
 
 vim.keymap.set('n', '<leader>ln', function()
-  local current_number = vim.wo.relativenumber
-  vim.wo.relativenumber = not current_number
+	local current_number = vim.wo.relativenumber
+	vim.wo.relativenumber = not current_number
 end, { silent = true })

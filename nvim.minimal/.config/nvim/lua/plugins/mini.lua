@@ -12,5 +12,6 @@ return {
 		})
 		require("mini.pairs").setup()
 		require("mini.notify").setup()
+		require("mini.statusline").setup()
 	end,
 }
