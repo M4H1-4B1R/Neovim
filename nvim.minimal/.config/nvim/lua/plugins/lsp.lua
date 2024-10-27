@@ -11,6 +11,40 @@ return {
 			require("mason-lspconfig").setup({
 				ensure_installed = { "lua_ls", "ts_ls", "html", "cssls", "vtsls" },
 				auto_install = true,
+				vtsls = {
+					filetypes = {
+						"javascript",
+						"javascriptreact",
+						"javascript.jsx",
+						"typescript",
+						"typescriptreact",
+						"typescript.jsx",
+					},
+					enableMoveToFileCodeAction = true,
+					autoUserWorkspaceTsdk = true,
+					experimental = {
+						completion = {
+							enableServerSideFuzzyMatch = true,
+						},
+					},
+					settings = {
+						complete_function_calls = true,
+					},
+				},
+				typescript = {
+					updateImportsOnFileMove = { enabled = "always" },
+					suggest = {
+						completeFunctionCalls = true,
+					},
+					inlayHints = {
+						enumMemberValues = { enabled = true },
+						functionLikeReturnTypes = { enabled = true },
+						parameterNames = { enabled = "literals" },
+						parameterTypes = { enabled = true },
+						propertyDeclarationTypes = { enabled = true },
+						variableTypes = { enabled = true },
+					},
+				},
 			})
 		end,
 	},
