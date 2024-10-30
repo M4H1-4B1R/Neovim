@@ -2,14 +2,16 @@ return {
 	{
 		"williamboman/mason.nvim",
 		config = function()
-			require("mason").setup({})
+			require("mason").setup({
+				ensure_installed = { "js-debug-adapter", "prettier", "phpcs", "php-cs-fixer" },
+			})
 		end,
 	},
 	{
 		"williamboman/mason-lspconfig.nvim",
 		config = function()
 			require("mason-lspconfig").setup({
-				ensure_installed = { "lua_ls", "ts_ls", "html", "cssls", "vtsls" },
+				ensure_installed = { "lua_ls", "ts_ls", "html", "cssls", "vtsls", "phpactor", "intelephense" },
 				auto_install = true,
 				vtsls = {
 					filetypes = {
@@ -52,7 +54,19 @@ return {
 		"neovim/nvim-lspconfig",
 		config = function()
 			local lspconfig = require("lspconfig")
-			local capabilities = require("cmp_nvim_lsp").default_capabilities()
+			-- local capabilities = require("cmp_nvim_lsp").default_capabilities()
+			local capabilities = vim.lsp.protocol.make_client_capabilities()
+			capabilities.textDocument.completion.completionItem.snippetSupport = true
+
+			servers = {
+				phpactor = {
+					enabled = lsp == "phpactor",
+				},
+				intelephence = {
+					enabled = lsp == "intelephense",
+				},
+			}
+
 			lspconfig.lua_ls.setup({
 				capabilties = capabilities,
 				on_attach = on_attach,
