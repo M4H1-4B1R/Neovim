@@ -58,10 +58,17 @@ return {
 			},
 		})
 
+		-- transparent background
 		vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
 		vim.api.nvim_set_hl(0, "Normal", { ctermbg = "none" })
 		vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 		vim.api.nvim_set_hl(0, "NormalFloat", { ctermbg = "none" })
+		vim.api.nvim_set_hl(0, "LineNr", { ctermbg = "none" })
+		vim.api.nvim_set_hl(0, "LineNr", { bg = "none" })
+		vim.api.nvim_set_hl(0, "LineNrAbove", { ctermbg = "none" })
+		vim.api.nvim_set_hl(0, "LineNrAbove", { bg = "none" })
+		vim.api.nvim_set_hl(0, "LineNrBelow", { ctermbg = "none" })
+		vim.api.nvim_set_hl(0, "LineNrBelow", { bg = "none" })
 	end,
 	-- vim.keymap.set("n", "<leader>fe", ":lua MiniFiles.open()<CR>", { noremap = true, silent = true }),
 }
