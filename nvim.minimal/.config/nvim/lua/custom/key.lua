@@ -11,7 +11,7 @@ vim.keymap.set("n", "tn", ":tabnext<Return>", { silent = true })
 vim.keymap.set("n", "tp", ":tabprev<Return>", { silent = true })
 
 -- netrw
-vim.keymap.set("n", "<leader>fe", ":Ex<CR>", { silent = true })
+vim.keymap.set("n", "<leader>fe", ":NvimTreeToggle<CR>", { silent = true })
 
 -- buffer navigation
 vim.keymap.set("n", "<leader>bn", ":bnext<CR>")
