@@ -20,7 +20,7 @@ vim.g.syntax = true
 vim.o.cursorline = true
 
 -- hide the cmdline for cleaner look
-vim.o.cmdheight = 0
+vim.o.cmdheight = 1
 
 -- Sync clipboard between OS and Neovim.
 --  Remove this option if you want your OS clipboard to remain independent.
