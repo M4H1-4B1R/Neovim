@@ -63,7 +63,7 @@ vim.o.shiftwidth = 2
 vim.o.tabstop = 2
 vim.o.autoindent = true
 vim.o.smartindent = true
-vim.o.shell = "bash"
+vim.o.shell = "fish"
 -- ignore node modules
 vim.opt.wildignore:append({ "/*node_modules*/" })
 vim.opt.path:append({ "**" })
