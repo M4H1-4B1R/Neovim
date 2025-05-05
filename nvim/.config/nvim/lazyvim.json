@@ -1,12 +1,10 @@
 {
   "extras": [
-    "lazyvim.plugins.extras.ai.supermaven",
-    "lazyvim.plugins.extras.coding.mini-surround",
-    "lazyvim.plugins.extras.coding.yanky",
-    "lazyvim.plugins.extras.editor.fzf",
     "lazyvim.plugins.extras.formatting.prettier",
-    "lazyvim.plugins.extras.linting.eslint",
-    "lazyvim.plugins.extras.util.mini-hipatterns"
+    "lazyvim.plugins.extras.lang.php",
+    "lazyvim.plugins.extras.lang.tailwind",
+    "lazyvim.plugins.extras.lang.typescript",
+    "lazyvim.plugins.extras.linting.eslint"
   ],
   "install_version": 8,
   "news": {
