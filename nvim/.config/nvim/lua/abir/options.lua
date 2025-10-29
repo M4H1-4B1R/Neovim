@@ -4,6 +4,10 @@
 
 vim.loader.enable()
 
+vim.opt.updatetime = 50
+
+vim.opt.swapfile = false
+
 -- Set highlight on search
 vim.o.hlsearch = false
 
