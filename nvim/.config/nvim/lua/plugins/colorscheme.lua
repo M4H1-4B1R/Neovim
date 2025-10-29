@@ -1,4 +1,5 @@
 return {
+	{
 	"catppuccin/nvim",
 	name = "catppuccin",
 	priority = 1000,
@@ -54,6 +55,24 @@ return {
 		})
 
 		-- setup must be called before loading
-		vim.cmd.colorscheme("catppuccin")
+		-- vim.cmd.colorscheme("catppuccin")
 	end,
+},
+
+{
+	'AlexvZyl/nordic.nvim',
+	lazy = false,
+	priority = 1000,
+	config = function()
+		require('nordic').setup({
+			transparent = {
+				bg = true,
+				float = true
+			}
+		})
+
+		vim.cmd.colorscheme("nordic")
+	end
+}
+
 }
